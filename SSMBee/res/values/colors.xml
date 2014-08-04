@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="LightGray">#D3D3D3</color>
+    <color name="Grey">#BEBEBE</color>
+    <color name="textcolor">#ec558d</color>
+    <color name="white">#ffffff</color>
+    <color name="Trans">#00000000</color>
+        
+</resources>
