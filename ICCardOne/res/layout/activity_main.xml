@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout 
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <TextView
+	        android:layout_width="70dp"
+	        android:layout_height="40dp"
+	        android:text="用户名:"/>
+	    <EditText  
+	        android:id="@+id/userNameEditText"
+	        android:layout_width="200dp"
+	        android:layout_height="40dp"
+	        android:inputType="text"
+	        android:background="@drawable/edittext_style"/>
+    </LinearLayout>
+    
+    
+     <LinearLayout 
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <TextView
+	        android:layout_width="70dp"
+	        android:layout_height="40dp"
+	        android:text="密码:"/>
+	    <EditText 
+	        android:id="@+id/passwordEditText"
+	        android:inputType="textPassword"
+	        android:layout_width="200dp"
+	        android:layout_height="40dp"
+	        android:background="@drawable/edittext_style"/>
+    </LinearLayout>
+
+     <CheckBox
+         android:layout_marginTop="10dp"
+         android:id="@+id/rememberCheckBox"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         android:text="记住账号" />
+    
+    <Button 
+        android:layout_marginTop="10dp"
+        android:id="@+id/loginUpButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="登录"
+        android:layout_gravity="center_horizontal"/>
+    
+</LinearLayout>
+
