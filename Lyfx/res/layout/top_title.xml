@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dip"
+    android:background="#b8babe" >
+    
+	<ImageButton
+	    android:layout_marginLeft="10dp" 
+	    android:id="@+id/leftNaviButton"
+	    android:contentDescription="@string/hello_world"
+	    android:layout_width="wrap_content"
+	    android:layout_height="30dp"
+	    android:background="@drawable/btn_back"
+	    android:layout_centerVertical="true" />
+	
+	<TextView
+        android:id="@+id/topTitleView"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_centerInParent="true"
+		android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center" />
+
+</RelativeLayout>
