@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:background="#ffffff"
+    android:baselineAligned="false">
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+        
+        <ImageView 
+            android:contentDescription="@string/imageviewcontent"
+            android:id="@+id/shopsImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/goodsimage"/>
+        
+        <ImageView 
+            android:contentDescription="@string/imageviewcontent"
+            android:id="@+id/shopsFlagImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/goodsflag"/>
+        
+        <ImageView 
+            android:contentDescription="@string/imageviewcontent"
+            android:id="@+id/shopsTwoFlagImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"/>
+        
+    </FrameLayout>
+
+    
+    <LinearLayout 
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <TextView 
+	            android:layout_marginTop="10dp"
+	            android:id="@+id/shopTitleTextView"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#333333"
+	            android:textSize="16sp"
+	            android:text="肯德基(联洋店)"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_marginTop="10dp" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <RatingBar android:id="@+id/ratingBar"
+			     android:layout_height="wrap_content"
+			     android:layout_width="wrap_content"
+			     android:rating = "5"
+			     android:numStars="5"
+			     android:isIndicator="true"
+			     style="@style/MyRatingBar" 
+			     android:layout_gravity="center_vertical"/>
+            
+            <TextView 
+                android:layout_marginLeft="5dp"
+	            android:id="@+id/contentTextView"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:textColor="#333333"
+	            android:text="4评价"
+	            android:visibility="gone" />
+            
+        </LinearLayout>
+        
+        
+        
+        <LinearLayout
+            android:layout_marginTop="10dp" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <TextView
+                android:id="@+id/distanceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大于10公里"
+                android:textSize="12sp" />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="12sp" />
+            
+            <TextView 
+                android:id="@+id/freeSendLimitTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="5元配送费"/>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="12sp" />
+            
+            <TextView 
+                android:id="@+id/sendTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="40分钟"/>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+</LinearLayout>

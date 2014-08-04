@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:orientation="vertical">  
+      
+    <!-- 这个布局决定了标签在上面还是在下面显示 -->  
+    <FrameLayout   
+        android:id="@+id/realtabcontent"  
+        android:layout_width="match_parent"  
+        android:layout_height="0dip"  
+        android:layout_weight="1" />  
+      
+   	<android.support.v4.app.FragmentTabHost  
+        android:id="@android:id/tabhost"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:background="@drawable/maintab_toolbar_bg">  
+          
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" />    
+        
+    </android.support.v4.app.FragmentTabHost>  
+      
+</LinearLayout>
+
+
+
+
+
+
+<!-- <TabHost xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!--     android:id="@android:id/tabhost" -->
+<!--     android:layout_width="fill_parent" -->
+<!--     android:layout_height="fill_parent" > -->
+
+<!--     <LinearLayout -->
+<!--         android:layout_width="fill_parent" -->
+<!--         android:layout_height="fill_parent" -->
+<!--         android:orientation="vertical" > -->
+
+<!--         <FrameLayout -->
+<!--             android:id="@android:id/tabcontent" -->
+<!--             android:layout_width="fill_parent" -->
+<!--             android:layout_height="0.0dip" -->
+<!--             android:layout_weight="1.0" /> -->
+
+<!--         <TabWidget -->
+<!--             android:id="@android:id/tabs" -->
+<!--             android:layout_width="fill_parent" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_weight="0.0" -->
+<!--             android:visibility="gone" /> -->
+
+<!--         <RadioGroup -->
+<!--             android:id="@+id/main_radiogroup" -->
+<!--             android:layout_width="fill_parent" -->
+<!--             android:layout_height="64dp" -->
+<!--             android:layout_gravity="bottom" -->
+<!--             android:background="@drawable/bg_bottom_tab" -->
+<!--             android:gravity="center_vertical" -->
+<!--             android:orientation="horizontal" -->
+<!--             android:paddingBottom="0dp" -->
+<!--             android:paddingTop="0dp" > -->
+
+<!--             <RadioButton -->
+<!--                 android:id="@+id/main_tab_chat" -->
+<!--                 style="@style/tab_item_button_style" -->
+<!--                 android:checked="true" -->
+<!--                 android:drawableTop="@drawable/tab_item_firstview" -->
+<!--                 android:paddingBottom="3dp" -->
+<!--                 android:paddingTop="3dp" -->
+<!--                 android:text="@string/bottom_tab_1" -->
+<!--                 android:textColor="@color/tab_text" /> -->
+
+<!--             <RadioButton -->
+<!--                 android:id="@+id/main_tab_contacts" -->
+<!--                 style="@style/tab_item_button_style" -->
+<!--                 android:drawableTop="@drawable/tab_item_secondview" -->
+<!--                 android:paddingBottom="3dp" -->
+<!--                 android:paddingTop="3dp" -->
+<!--                 android:text="@string/bottom_tab_2" -->
+<!--                 android:textColor="@color/tab_text" /> -->
+
+<!--             <RadioButton -->
+<!--                 android:id="@+id/main_tab_trade" -->
+<!--                 style="@style/tab_item_button_style" -->
+<!--                 android:drawableTop="@drawable/tab_item_threeview" -->
+<!--                 android:paddingBottom="3dp" -->
+<!--                 android:paddingTop="3dp" -->
+<!--                 android:text="@string/bottom_tab_3" -->
+<!--                 android:textColor="@color/tab_text" /> -->
+
+<!--             <RadioButton -->
+<!--                 android:id="@+id/main_tab_settings" -->
+<!--                 style="@style/tab_item_button_style" -->
+<!--                 android:drawableTop="@drawable/tab_item_fourview" -->
+<!--                 android:paddingBottom="3dp" -->
+<!--                 android:paddingTop="3dp" -->
+<!--                 android:text="@string/bottom_tab_4" -->
+<!--                 android:textColor="@color/tab_text" /> -->
+<!--         </RadioGroup> -->
+<!--     </LinearLayout> -->
+
+<!-- </TabHost> -->
+
