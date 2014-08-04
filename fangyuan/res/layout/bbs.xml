@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="46dip"
+        android:layout_alignParentTop="true" >
+        <include layout="@layout/top_title" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bbs_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_below="@id/top"
+        android:orientation="vertical" >
+
+	    <com.law.fangyuan.Loading
+	        android:id="@+id/loading"        
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"/>
+	    <WebView 
+	        android:id="@+id/bbs_web"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:visibility="gone"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

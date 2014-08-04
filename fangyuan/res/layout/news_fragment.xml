@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/item_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+    <LinearLayout 
+        android:id="@+id/waittingLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <ProgressBar
+	        android:id="@+id/progressBar1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="15dp"
+	        android:layout_gravity="center_horizontal" 
+	        android:visibility="gone" />
+
+    	<ImageView
+	        android:id="@+id/detail_loading"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/detail_loading"
+	        android:visibility="gone" />
+    	
+    	<com.law.fangyuan.Loading
+	        android:id="@+id/loading"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="50dip" />
+    	
+    </LinearLayout>
+    
+
+    
+
+<!--     <ListView -->
+<!--         android:id="@+id/mListView" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="match_parent" -->
+<!--         android:divider="#ffdddddd" -->
+<!--         android:dividerHeight="0.5dp" -->
+<!--         android:fadingEdge="none" -->
+<!--         android:scrollbars="none" /> -->
+    
+    
+<!--     <com.gov.nzjcy.component.MyListView -->
+<!--          android:id="@+id/mListView" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="match_parent" -->
+<!--         android:divider="#ffdddddd" -->
+<!--         android:dividerHeight="0.5dp" -->
+<!--         android:fadingEdge="none" -->
+<!--         android:scrollbars="none">  -->
+<!--     </com.gov.nzjcy.component.MyListView> -->
+    
+<!--     <com.handmark.pulltorefresh.library.PullToRefreshListView -->
+<!--         xmlns:ptr="http://schemas.android.com/apk/res-auto" -->
+<!--         android:id="@+id/mListView" -->
+<!--         android:layout_width="fill_parent" -->
+<!--         android:layout_height="fill_parent" -->
+<!--         android:fadingEdge="none" -->
+<!--         android:divider="#ffdddddd" -->
+<!--         android:dividerHeight="0.5dp" -->
+<!--         android:fastScrollEnabled="false" -->
+<!--         android:footerDividersEnabled="false" -->
+<!--         android:headerDividersEnabled="false" -->
+<!--         android:smoothScrollbar="true" -->
+<!--         ptr:ptrAnimationStyle="flip" > -->
+<!--     </com.handmark.pulltorefresh.library.PullToRefreshListView> -->
+    
+    <com.law.fangyuan.DropDownListView
+          android:id="@+id/mListView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="#F6F6F6"
+          android:cacheColorHint="#00000000"
+          android:divider="#e2e2e2"
+          android:dividerHeight="1dp"
+          android:drawSelectorOnTop="false"
+          android:visibility="gone" />
+
+   
+   
+</RelativeLayout>

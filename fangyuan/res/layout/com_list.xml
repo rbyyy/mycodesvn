@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="46dip"
+        android:layout_alignParentTop="true" >
+
+        <include layout="@layout/top_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/top"
+        android:orientation="vertical" >
+
+        <com.law.fangyuan.Loading
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dip"
+            android:background="#ffffff" />
+
+        <com.law.fangyuan.DropDownListView
+            android:id="@+id/com_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F6F6F6"
+            android:cacheColorHint="#00000000"
+            android:divider="#D6D6D6"
+            android:dividerHeight="1px"
+            android:drawSelectorOnTop="false" />
+    </LinearLayout>
+
+</RelativeLayout>
