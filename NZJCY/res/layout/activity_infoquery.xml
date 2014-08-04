@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!-- 导航栏 -->
+    <LinearLayout
+        android:id="@+id/topInfoQuery"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <include layout="@layout/top_title" />
+    </LinearLayout> 
+<!-- 	<TabHost -->
+<!-- 	    android:layout_below="@id/topInfoQuery" -->
+<!-- 	    android:id="@+id/topInfoQueryTabHost" -->
+<!-- 	    android:layout_width="match_parent" -->
+<!-- 	    android:layout_height="40dp" > -->
+        
+<!-- 	    <LinearLayout  -->
+<!-- 	        android:id="@+id/userInfoQueryLinearLayout" -->
+<!-- 	        android:layout_width="match_parent" -->
+<!-- 	        android:layout_height="40dp" -->
+<!-- 	        android:orientation="horizontal" -->
+<!-- 	        android:baselineAligned="false"> -->
+	         
+<!-- 	        <TabWidget -->
+<!-- 	        	android:layout_weight="0" -->
+<!-- 	            android:id="@android:id/tabs" -->
+<!-- 	            android:layout_width="fill_parent" -->
+<!-- 	            android:layout_height="wrap_content" /> -->
+	        
+<!-- 	        <FrameLayout -->
+<!-- 	       		android:gravity="bottom" -->
+<!-- 	       		android:layout_weight="1" -->
+<!-- 	            android:id="@android:id/tabcontent"           -->
+<!-- 	            android:layout_width="fill_parent" -->
+<!-- 	            android:layout_height="fill_parent" -->
+<!-- 	            android:padding="0dp"> -->
+<!-- 				<TextView android:id="@+id/infoQueryView1"  -->
+<!-- 	                android:layout_width="fill_parent"   -->
+<!-- 	                android:layout_height="fill_parent"/>   -->
+<!-- 	            <TextView android:id="@+id/infoQueryView2"  -->
+<!-- 	                android:layout_width="fill_parent"   -->
+<!-- 	                android:layout_height="fill_parent"/>       -->
+<!-- 	        </FrameLayout> -->
+<!-- 	    </LinearLayout> -->
+	    
+<!--     </TabHost> -->
+    <!-- 	    android:layout_below="@id/topInfoQueryTabHost" -->
+    <!-- 登录项 -->
+	<LinearLayout 
+	    android:layout_below="@id/topInfoQuery"
+        android:id="@+id/topInfoQueryOneLinearLayout"
+	    android:layout_marginLeft="8dp"
+	    android:layout_width="344dp"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+	    <TextView 
+	        android:layout_marginTop="8dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:text="承办单位"/>
+	    <TextView 
+    	    android:layout_marginTop="8dp"
+    	    android:id="@+id/infoQueryUnitTextView"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:text="市院"
+    	    android:textSize="14sp"
+    	    android:padding="8dp"
+    	    android:singleLine="true"
+    	    android:background="@drawable/comment_view_input_bg"/>
+	    <TextView 
+	        android:layout_marginTop="8dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:text="案件类型"/>
+	    <TextView 
+    	    android:layout_marginTop="8dp"
+    	    android:id="@+id/infoQueryClassifyTextView"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:text="审查起诉案件"
+    	    android:textSize="14sp"
+    	    android:padding="8dp"
+    	    android:singleLine="true"
+    	    android:background="@drawable/comment_view_input_bg"/>
+	    <TextView 
+    	    android:layout_marginTop="8dp"
+    	    android:id="@+id/infoQueryDateStartTextView"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:textSize="14sp"
+    	    android:padding="8dp"
+    	    android:background="@drawable/comment_view_input_bg"/>
+	     <TextView 
+    	    android:layout_marginTop="8dp"
+    	    android:id="@+id/infoQueryDateEndTextView"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:textSize="14sp"
+    	    android:padding="8dp"
+    	    android:background="@drawable/comment_view_input_bg"/>
+	     <EditText 
+    	    android:layout_marginTop="8dp"
+    	    android:id="@+id/infoQueryUserNameEditText"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:hint="案件相关人姓名"
+    	    android:textSize="14sp"
+    	    android:padding="8dp"
+    	    android:singleLine="true"
+    	    android:background="@drawable/comment_view_input_bg"/>
+	    <Button
+    	    android:layout_marginTop="8dp"
+    	    android:id="@+id/infoQueryResultButton"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:text="查询"></Button>
+	</LinearLayout>
+	
+	<!-- 查询结果-->
+<!-- 	<RelativeLayout  -->
+<!-- 	    android:layout_below="@id/topInfoQueryTabHost" -->
+<!--         android:id="@+id/topInfoQueryTwoRelativeLayout" -->
+<!-- 	    android:layout_marginLeft="8dp" -->
+<!-- 	    android:layout_width="344dp" -->
+<!-- 	    android:layout_height="wrap_content" -->
+<!-- 	    android:visibility="invisible"> -->
+<!-- 	    <ListView  -->
+<!-- 	        android:id="@+id/infoQueryResultListView" -->
+<!-- 	        android:layout_width="match_parent" -->
+<!-- 	        android:layout_height="match_parent"> -->
+	        
+<!-- 	    </ListView> -->
+	    
+<!-- 	    <LinearLayout  -->
+<!-- 	        android:id="@+id/infoQueryResultLinearLayout" -->
+<!-- 	        android:layout_width="match_parent" -->
+<!-- 	        android:layout_height="match_parent" -->
+<!-- 	        android:orientation="vertical" -->
+<!-- 	        android:gravity="center"> -->
+<!-- 	        <TextView  -->
+<!-- 	            android:layout_width="wrap_content" -->
+<!-- 	            android:layout_height="wrap_content" -->
+<!-- 	            android:text="正在查询，请稍候..." -->
+<!-- 	            android:layout_gravity="center_horizontal" -->
+<!-- 	            /> -->
+<!-- 	        <ProgressBar -->
+<!-- 		        android:id="@+id/progressBarCommit" -->
+<!-- 		        android:layout_width="wrap_content" -->
+<!-- 		        android:layout_height="wrap_content" -->
+<!-- 		        android:layout_marginBottom="15dp" -->
+<!-- 		        android:layout_gravity="center_horizontal" /> -->
+<!--     	</LinearLayout> -->
+	    
+<!-- 	</RelativeLayout> -->
+	
+</RelativeLayout>

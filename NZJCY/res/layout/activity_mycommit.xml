@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!-- 导航栏 -->
+    <LinearLayout
+        android:id="@+id/topMyCommit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <include layout="@layout/top_title" />
+    </LinearLayout>
+    
+    <ListView 
+        android:layout_below="@id/topMyCommit"
+        android:id="@+id/mycommitListView"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+        
+    </ListView>
+    <LinearLayout 
+        android:layout_below="@id/topMyCommit"
+        android:id="@+id/openApplyCommitLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在查询，请稍候..."
+            android:layout_gravity="center_horizontal"
+            />
+        <ProgressBar
+	        android:id="@+id/progressBarCommit"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="15dp"
+	        android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+    
+    
+
+</RelativeLayout>

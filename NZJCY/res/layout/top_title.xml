@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="#aa281d" >
+    <!-- 返回按钮 -->
+    <LinearLayout 
+       android:id="@+id/leftPopLinearLayout"
+       android:layout_width="54dp"
+       android:layout_height="48dp"
+       android:orientation="horizontal" >
+       <ImageView 
+           android:id="@+id/popArrowsImageview"
+           android:layout_marginTop="19dp"
+           android:layout_marginLeft="4dp"
+           android:layout_width="8dp"
+           android:layout_height="10dp"
+           android:src="@drawable/leftpoparrows"/>
+        <ImageView 
+            android:id="@+id/popLogoImageview"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="6dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/logo"
+            />
+    </LinearLayout>
+    <!-- 标题 -->
+    <TextView 
+        android:layout_toRightOf="@id/leftPopLinearLayout"
+        android:id="@+id/topTitleTextview"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="12dp"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#fccf44"/>
+    <!-- 登陆小图标 -->
+    <ImageButton 
+        android:layout_toRightOf="@id/topTitleTextview"
+        android:id="@+id/loginImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>
+<!-- android:src="@drawable/login_head_image" -->
