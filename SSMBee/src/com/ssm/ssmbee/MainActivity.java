@@ -4,10 +4,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.ssm.ssmbee.adapter.MenuExpandableListAdapter;
+import com.ssm.ssmbee.entity.BaseResponse;
 import com.ssm.ssmbee.entity.OrderMenu;
 import com.ssm.ssmbee.entity.StateCode;
 import com.ssm.ssmbee.exception.BaseException;
+import com.ssm.ssmbee.httpoperation.GosHttpApplication;
+import com.ssm.ssmbee.httpoperation.GosHttpOperation;
+import com.ssm.ssmbee.helper.SSMHelper;
 
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -94,6 +100,7 @@ public class MainActivity extends BaseActivity {
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */
+	@SuppressLint("HandlerLeak")
 	public static class PlaceholderFragment extends Fragment {
 		
 		/**完成按钮*/
@@ -104,8 +111,12 @@ public class MainActivity extends BaseActivity {
 		private ExpandableListView 				expandableListView;
 		/**数据源*/
 		private MenuExpandableListAdapter 		adapter;
-		private ArrayList<String> 				groupList;
-		private ArrayList<List<OrderMenu>> 		childList;
+		private ArrayList<String> 				groupList = new ArrayList<String>();
+		private ArrayList<List<OrderMenu>> 		childList = new ArrayList<List<OrderMenu>>();
+		protected GosHttpApplication 			gosHttpApplication;
+		protected GosHttpOperation 				gosHttpOperation;
+		/**等待动画*/
+		private		ProgressDialog				progressDialog;
 
 		
 		public PlaceholderFragment() {
@@ -116,7 +127,16 @@ public class MainActivity extends BaseActivity {
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_main, container,
 					false);
+			gosHttpApplication = (GosHttpApplication)getActivity().getApplication();
+			gosHttpOperation = gosHttpApplication.getGosHttpOperation();
 			findView(rootView);
+			progressDialog = new ProgressDialog(getActivity());
+			SSMHelper.showProgressDialog(progressDialog);
+			new Thread(){
+				public void run() {
+					requestBeeStatusOrder("1");
+				}
+			}.start();
 			return rootView;
 		}
 		
@@ -126,53 +146,68 @@ public class MainActivity extends BaseActivity {
 			finishButton = (Button)view.findViewById(R.id.fininshedButton);
 			finishButton.setOnClickListener(new OnClickAction());
 			expandableListView = (ExpandableListView) view.findViewById(R.id.menuExpandableList);
-			InitData();
-			adapter = new MenuExpandableListAdapter(getActivity(), groupList, childList);
-			expandableListView.setAdapter(adapter);
 		}
 		
-		/***
-		 * InitData
-		 */
-		void InitData() {
-			groupList = new ArrayList<String>();
-			groupList.add("1");
-			groupList.add("2");
-			groupList.add("3");
-			childList = new ArrayList<List<OrderMenu>>();
-			for (int i = 0; i < groupList.size(); i++) {
-				List<OrderMenu> childTemp = new ArrayList<OrderMenu>();
-				if (i == 0) {
-					OrderMenu orderMenu = new OrderMenu();
-					orderMenu.setShopName("店名");
-					orderMenu.setShopAddress("店的地址");
-					orderMenu.setShopPhone("0371-66666666");
-					orderMenu.setBuyName("刘成");
-					orderMenu.setBuyAddress("买家地址");
-					orderMenu.setBuyPhone("13443434343");
-					childTemp.add(orderMenu);
-				} else if (i == 1) {
-					OrderMenu orderMenu = new OrderMenu();
-					orderMenu.setShopName("店名");
-					orderMenu.setShopAddress("店的地址");
-					orderMenu.setShopPhone("0371-66666666");
-					orderMenu.setBuyName("刘成");
-					orderMenu.setBuyAddress("买家地址");
-					orderMenu.setBuyPhone("13443434343");
-					childTemp.add(orderMenu);
-				} else {
-					OrderMenu orderMenu = new OrderMenu();
-					orderMenu.setShopName("店名");
-					orderMenu.setShopAddress("店的地址");
-					orderMenu.setShopPhone("0371-66666666");
-					orderMenu.setBuyName("刘成");
-					orderMenu.setBuyAddress("买家地址");
-					orderMenu.setBuyPhone("13443434343");
-					childTemp.add(orderMenu);
+	    /**请求小蜜蜂状态订单信息*/
+		protected void requestBeeStatusOrder(String orderStatusString) {
+			try {
+				String userIdString = SSMHelper.getSharePreStr(getActivity(), GosHttpApplication.USER_ID_STRING);
+				BaseResponse<OrderMenu> baseResponse = gosHttpOperation.invokerObtainBeeStatusOrder(userIdString, orderStatusString);
+				int codeInt = baseResponse.getCode();
+				if (codeInt == 1) {
+					groupList.clear();
+					childList.clear();
+					List<OrderMenu> childListOne = baseResponse.getData();
+					for (int i = 0; i < childListOne.size(); i++) {
+						groupList.add(String.valueOf(i+1));
+						List<OrderMenu> childTemp = new ArrayList<OrderMenu>();
+						childTemp.add(childListOne.get(i));
+						childList.add(childTemp);
+					}
+					loginHandler.sendEmptyMessage(1);
 				}
-				childList.add(childTemp);
+				else {
+					loginHandler.sendEmptyMessage(0);
+				}
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				loginHandler.sendEmptyMessage(0);
+			} catch (BaseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				loginHandler.sendEmptyMessage(0);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				loginHandler.sendEmptyMessage(0);
 			}
-
+		}
+		
+		private Handler loginHandler = new Handler(){
+			public void handleMessage(Message msg) {
+				switch (msg.what) {
+				case 0:
+					loginRequestFailed();
+					break;
+				case 1:
+					loginRequestSuccessed();
+					break;
+				default:
+					break;
+				}
+			}
+		};
+		/**请求失败*/
+		protected void loginRequestFailed() {
+			progressDialog.dismiss();
+			Toast.makeText(getActivity(), "获取小蜜蜂订单信息失败", Toast.LENGTH_SHORT).show();
+		}
+		/**请求成功*/
+		protected void loginRequestSuccessed() {
+			adapter = new MenuExpandableListAdapter(getActivity(), groupList, childList);
+			expandableListView.setAdapter(adapter);
+			progressDialog.dismiss();
 		}
 		
 		protected class OnClickAction implements OnClickListener{
@@ -187,6 +222,12 @@ public class MainActivity extends BaseActivity {
 							getResources().getDrawable(R.drawable.unfinish_bg), null, null);
 					finishButton.setBackgroundResource(R.drawable.button_unselect_bg);
 					finishButton.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.finish_bg), null, null);
+					SSMHelper.showProgressDialog(progressDialog);
+					new Thread(){
+						public void run() {
+							requestBeeStatusOrder("1");
+						}
+					}.start();
 					break;
 				case R.id.fininshedButton:
 					unfinishButton.setBackgroundResource(R.drawable.button_unselect_bg);
@@ -194,6 +235,12 @@ public class MainActivity extends BaseActivity {
 							getResources().getDrawable(R.drawable.unfinished_bg), null, null);
 					finishButton.setBackgroundResource(R.drawable.button_selected_bg);
 					finishButton.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.finished_bg), null, null);
+					SSMHelper.showProgressDialog(progressDialog);
+					new Thread(){
+						public void run() {
+							requestBeeStatusOrder("2");
+						}
+					}.start();
 					break;
 				default:
 					break;
@@ -248,12 +295,12 @@ public class MainActivity extends BaseActivity {
 	/**登录请求失败*/
 	protected void loginRequestFailed() {
 		progressDialog.dismiss();
-		Toast.makeText(MainActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
+		Toast.makeText(MainActivity.this, "请求订单数据失败", Toast.LENGTH_SHORT).show();
 	}
 	/**登录请求成功*/
 	protected void loginRequestSuccessed() {
 		progressDialog.dismiss();
-		Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+		Toast.makeText(MainActivity.this, "请求订单数据成功", Toast.LENGTH_SHORT).show();
 	}
 	
 	//按两次返回键退出

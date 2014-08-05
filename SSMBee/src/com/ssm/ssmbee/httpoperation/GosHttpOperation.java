@@ -72,5 +72,12 @@ public class GosHttpOperation {
     public StateCode invokerBeeGrabOrder(String beeIdString, String orderIdString) throws ParseException, BaseException, IOException{
     	return apiInvoker.invokerBeeGrabOrder(beeIdString, orderIdString);
     }
+    /**
+     * 1.0.9 小蜜蜂订单列表
+     * by 果悦科技
+     * */
+    public BaseResponse<OrderMenu> invokerObtainBeeStatusOrder(String beeIdString, String orderStatusString) throws ParseException, BaseException, IOException{
+    	return apiInvoker.invokerObtainBeeStatusOrder(beeIdString, orderStatusString);
+    }
         
 }

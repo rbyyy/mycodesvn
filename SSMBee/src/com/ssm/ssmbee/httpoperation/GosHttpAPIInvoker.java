@@ -162,6 +162,23 @@ public class GosHttpAPIInvoker {
     	HttpPost mHttpPost = mHttpApi.createHttpPost(fullUrl(URL_API_ORDER),  paramJsonObject.toString());
     	return (StateCode)mHttpApi.doHttpRequest(mHttpPost, new StateCodeParser());
     }
+    /**
+     * 1.0.9 小蜜蜂订单列表
+     * by 果悦科技
+     * */
+    protected BaseResponse<OrderMenu> invokerObtainBeeStatusOrder(String beeIdString, String orderStatusString) throws ParseException, BaseException, IOException{
+    	JSONObject paramJsonObject = new JSONObject();
+    	paramJsonObject.put("action", "107009");
+    	
+    	JSONObject paramJsonObject2 = new JSONObject();
+    	paramJsonObject2.put("beeId", beeIdString);//小蜜蜂id
+    	paramJsonObject2.put("orderStatus", orderStatusString);//订单状态
+    	
+    	paramJsonObject.put("data", paramJsonObject2);
+    	
+    	HttpPost mHttpPost = mHttpApi.createHttpPost(fullUrl(URL_API_ORDER),  paramJsonObject.toString());
+    	return (BaseResponse<OrderMenu>)mHttpApi.doHttpRequest(mHttpPost, new OrderMenuParser());
+    }
     
 	
 }
