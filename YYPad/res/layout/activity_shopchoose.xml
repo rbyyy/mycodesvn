@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0e0e0"
+    android:orientation="vertical" >
+<!-- 导航栏 -->
+ 	 <LinearLayout
+        android:id="@+id/topShopChoose"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true" >
+        <include layout="@layout/top_title" />
+    </LinearLayout> 
+<!-- 店面选择界面 -->
+    <LinearLayout 
+       	  android:layout_below="@id/topShopChoose"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="40dp"
+          android:layout_marginTop="40dp"
+          android:orientation="vertical"
+          >
+        <LinearLayout
+            android:layout_width="1200dp"
+            android:layout_height="572dp" 
+            android:orientation="vertical"
+            android:background="#3395d7"
+            >
+<!--             <RelativeLayout -->
+<!--                 android:id="@+id/topLayout" -->
+<!--                 android:layout_width="1120dp" -->
+<!--                 android:layout_height="60dp"  -->
+<!--                 android:background="@drawable/title_bg_red" -->
+<!--                 > -->
+<!--                 <TextView  -->
+<!--                     android:text="店面选择" -->
+<!--         			android:layout_width="match_parent" -->
+<!--         			android:layout_height="match_parent" -->
+<!--         			android:layout_centerInParent="true" -->
+<!-- 					android:layout_centerHorizontal="true" -->
+<!--         			android:textAlignment="center" -->
+<!--         			android:textColor="#FFFFFF" -->
+<!--         			android:textSize="32sp" -->
+<!--         			android:gravity="center" -->
+<!--                     /> -->
+<!--             </RelativeLayout> -->
+            <RelativeLayout 
+                android:layout_width="1200dp"
+    			android:layout_height="50dp">
+                <TextView 
+        			android:id="@+id/shopChooseNameTextView"
+        			android:layout_width="150dp"
+        			android:layout_height="50dp"
+        			android:textSize="25sp"
+        			android:text="店面名称"
+        			android:textColor="#ffffff"
+        			android:gravity="center" />
+    			<TextView 
+        			android:id="@+id/shopChooseManagerTextView"
+        			android:layout_toRightOf="@id/shopChooseNameTextView"
+        			android:layout_width="160dp"
+        			android:layout_height="50dp"
+        			android:textSize="25sp"
+        			android:text="店面管理员"
+        			android:textColor="#ffffff"
+        			android:gravity="center"/>
+    			<TextView 
+        			android:id="@+id/shopChooseAddressTextView"
+        			android:layout_toRightOf="@id/shopChooseManagerTextView"
+        			android:layout_width="350dp"
+        			android:layout_height="50dp"
+        			android:textSize="25sp"
+        			android:text="店面地址"
+        			android:textColor="#ffffff"
+        			android:gravity="center"/>
+    			<TextView 
+        			android:id="@+id/shopChooseTelephoneTextView"
+        			android:layout_toRightOf="@id/shopChooseAddressTextView"
+        			android:layout_width="230dp"
+        			android:layout_height="50dp"
+        			android:textSize="25sp"
+        			android:text="店面联系电话"
+        			android:textColor="#ffffff"
+        			android:gravity="center"/>
+    			<TextView 
+        			android:id="@+id/shopChooseOpenTextView"
+        			android:layout_toRightOf="@id/shopChooseTelephoneTextView"
+        			android:layout_width="150dp"
+        			android:layout_height="50dp"
+        			android:textSize="25sp"
+        			android:text="店面是否启用"
+        			android:textColor="#ffffff"
+        			android:gravity="center"/>
+    			<TextView 
+        			android:id="@+id/shopChooseRadioTextView"
+        			android:layout_toRightOf="@id/shopChooseOpenTextView"
+        			android:layout_width="150dp"
+        			android:layout_height="50dp"
+        			android:textSize="25sp"
+        			android:text="店面选择"
+        			android:textColor="#ffffff"
+        			android:gravity="center"/>
+            </RelativeLayout>
+            <ImageView
+                android:contentDescription="@string/imageview_desc"
+                android:layout_width="1200dp"
+                android:layout_height="2dp"
+                android:background="@drawable/chooseseparatorline" 
+                />
+            <ListView
+                android:id="@+id/shopChooseListView"
+                android:layout_width="1200dp"
+                android:layout_height="520dp" 
+                android:layout_marginTop="4dp"
+				android:background="@android:color/transparent"
+                ></ListView>
+        </LinearLayout>
+         <RelativeLayout 
+                android:layout_width="1200dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                >
+                <Button 
+	                android:id="@+id/updateDataButton"
+	                android:layout_marginLeft="100dp"
+	                android:layout_width="200dp"
+	                android:layout_height="60dp"
+	                android:background="#3395d7"
+	                android:text="更新数据"/>
+               <Button 
+                   android:layout_toRightOf="@id/updateDataButton"
+	                android:id="@+id/accessIntoButton"
+	                android:layout_marginLeft="600dp"
+	                android:layout_width="200dp"
+	                android:layout_height="60dp"
+	                android:background="#3395d7"
+	                android:text="进入"/>
+            </RelativeLayout>
+    </LinearLayout>
+<!--     android:layout_marginTop="10dp" -->
+<!--                     android:divider="@null"
+ 	        	android:listSelector="@android:color/transparent" -->
+<!--                     android:layout_marginTop="12dp" -->
+<!--     android:layout_marginTop="5dp" -->
+<!--                 //android:layout_marginLeft="6dp"  -->
+<!--     <LinearLayout  -->
+<!--         android:layout_below="@id/topShopChoose" -->
+<!--         android:layout_marginLeft="80dp" -->
+<!--         android:layout_marginTop="20dp" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:orientation="vertical" -->
+<!--         android:background="#3395d7"> -->
+<!--         <TextView  -->
+<!--             android:layout_width="1120dp" -->
+<!--             android:layout_height="60dp" -->
+<!--             android:textColor="#ffffff" -->
+<!--             android:textSize="36sp" -->
+<!--             android:gravity="center" -->
+<!--             android:text="选择店面" -->
+<!--             /> -->
+<!--         <ListView  -->
+<!-- 	        android:id="@+id/shopChooseListView" -->
+<!-- 	        android:layout_width="1120dp" -->
+<!-- 	        android:layout_height="520dp" -->
+<!-- 	        android:listSelector="@android:color/transparent" -->
+<!-- 	        > -->
+<!--     	</ListView> -->
+<!--     </LinearLayout> -->
+
+</RelativeLayout>

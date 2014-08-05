@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0e0e0"
+    android:orientation="vertical" >
+    
+<!-- 导航栏 -->
+ 	 <LinearLayout
+        android:id="@+id/topComplete"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true" >
+
+        <include layout="@layout/top_title" />
+    </LinearLayout> 
+    
+<!-- 整机展示 -->
+<!-- 	<ListView 
+	    android:id="@+id/completeMachListView"
+	    android:layout_below="@id/topComplete"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    >
+	</ListView> -->
+
+<GridView 
+    android:id="@+id/completeMachGridView"
+	android:layout_marginLeft="14dp"
+    android:layout_marginRight="14dp"
+    android:layout_marginTop="10dp"
+    android:layout_below="@id/topComplete"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:horizontalSpacing="12dp"
+    android:verticalSpacing="14dp"
+    android:numColumns="3"
+    ></GridView>
+
+</RelativeLayout>

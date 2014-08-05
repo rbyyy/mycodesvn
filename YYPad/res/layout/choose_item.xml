@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="403dp"
+    android:layout_height="38dp" >
+    <TextView 
+        android:id="@+id/chooseClassTextView"
+        android:layout_width="59dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="3dp"
+        android:textSize="17sp"
+        android:gravity="center|top" />
+    <TextView 
+        android:id="@+id/chooseNameTextView"
+        android:layout_toRightOf="@id/chooseClassTextView"
+        android:layout_width="209dp"
+        android:layout_height="38dp"
+        android:textSize="17sp"
+        android:gravity="center|top"/>
+<!--     <TextView  -->
+<!--         android:id="@+id/choosePriceTextView" -->
+<!--         android:layout_toRightOf="@id/chooseNameTextView" -->
+<!--         android:layout_width="58dp" -->
+<!--         android:layout_height="38dp" -->
+<!--         android:textSize="17sp" -->
+<!--         android:gravity="center|top"/> -->
+    <Button 
+        android:id="@+id/choosePriceButton"
+        android:layout_toRightOf="@id/chooseNameTextView"
+         android:layout_width="88dp"
+        android:layout_height="32dp"
+        android:textSize="17sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#000000"
+         android:background="#ffffff"/>
+    <Button 
+         android:id="@+id/chooseNumberEditButton"
+         android:layout_toRightOf="@id/choosePriceButton"
+         android:layout_marginLeft="8dp"
+         android:layout_width="63dp"
+         android:layout_height="32dp"
+         android:layout_gravity="center_horizontal"
+         android:textColor="#000000"
+         android:background="#ffffff"/>
+
+    <ImageButton 
+        android:id="@+id/chooseDeleteImageButton"
+        android:contentDescription="@string/image_button_desc"
+        android:layout_toRightOf="@id/chooseNumberEditButton"
+        android:layout_width="53dp"
+        android:layout_height="32dp"       
+        android:background="@drawable/delete_btn_press"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
+<!--         android:layout_marginTop="9dp" -->
+<!--         android:layout_marginLeft="17dp" -->
+<!--     <LinearLayout  -->
+<!--         android:id="@+id/chooseNumberLinearLayout" -->
+<!--         android:layout_toRightOf="@id/choosePriceButton" -->
+<!--         android:layout_width="73dp" -->
+<!--         android:layout_height="32dp" -->
+<!--         android:orientation="horizontal"> -->
+<!--       <Button  -->
+<!--             android:id="@+id/minusButton" -->
+<!--             android:layout_width="25dp" -->
+<!--             android:layout_height="30dp" -->
+<!--             android:background="@drawable/choose_minus_btn_press"/> -->
+<!--          <TextView  -->
+<!-- 	        android:id="@+id/chooseNumberTextView" -->
+<!-- 	        android:layout_width="53dp" -->
+<!-- 	        android:layout_height="38dp" -->
+<!-- 	        android:textSize="17sp" -->
+<!-- 	        android:gravity="center|top"/> -->
+<!--          <EditText  -->
+<!--             android:id="@+id/chooseNumberEditText" -->
+<!-- 	        android:layout_width="53dp" -->
+<!-- 	        android:layout_height="38dp" -->
+<!-- 	        android:textSize="17sp" -->
+<!-- 	        android:inputType="phone" -->
+<!-- 	        android:layout_gravity="center_horizontal"/> -->
+
+<!--          <Button  -->
+<!--             android:id="@+id/plusButton" -->
+<!--             android:layout_width="25dp" -->
+<!--             android:layout_height="30dp" -->
+<!--             android:background="@drawable/choose_plus_btn_press"/> -->
+<!--     </LinearLayout> -->
