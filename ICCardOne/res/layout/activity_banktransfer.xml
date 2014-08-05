@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TabHost
+	    android:id="@+id/topBankTransferTabHost"
+	    android:layout_width="match_parent"
+	    android:layout_height="40dp" >
+        
+	    <LinearLayout 
+	        android:id="@+id/bankTransferLinearLayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:orientation="horizontal"
+	        android:baselineAligned="false">
+	         
+	        <TabWidget
+	        	android:layout_weight="0"
+	            android:id="@android:id/tabs"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content" />
+	        
+	        <FrameLayout
+	       		android:gravity="bottom"
+	       		android:layout_weight="1"
+	            android:id="@android:id/tabcontent"          
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:padding="0dp">
+				<TextView android:id="@+id/bankTransferView1" 
+	                android:layout_width="fill_parent"  
+	                android:layout_height="fill_parent"/>  
+	            <TextView android:id="@+id/bankTransferView2" 
+	                android:layout_width="fill_parent"  
+	                android:layout_height="fill_parent"/>  
+	            <TextView android:id="@+id/bankTransferView3" 
+	                android:layout_width="fill_parent"  
+	                android:layout_height="fill_parent"/>     
+	        </FrameLayout>
+	    </LinearLayout>
+	    
+    </TabHost>
+    
+    <LinearLayout 
+        android:layout_below="@id/topBankTransferTabHost"
+        android:id="@+id/oneLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <LinearLayout 
+	        android:layout_marginTop="30dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.98"
+	            android:gravity="right"
+	            android:text="开户行:" />
+	        
+	        <EditText
+	            android:id="@+id/bankNameEditText"
+	            android:layout_width="237dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:background="@drawable/edittext_style"
+	            android:inputType="text" />
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"/>
+	        
+	    </LinearLayout>
+    
+	    <LinearLayout
+	        android:layout_marginTop="10dp" 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1.44"
+	            android:text="卡号:"
+	            android:gravity="right"/>
+	        
+	        <EditText
+	            android:id="@+id/cardNumberEditText"
+	            android:layout_width="237dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:layout_weight="0.03"
+	            android:background="@drawable/edittext_style"
+	            android:inputType="number" />
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"/>
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:layout_marginTop="10dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1.44"
+	            android:gravity="right"
+	            android:text="姓名:" />
+	        
+	        <EditText
+	            android:id="@+id/accountNameEditText"
+	            android:layout_width="237dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:background="@drawable/edittext_style"
+	            android:inputType="text" />
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"/>
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:layout_marginTop="10dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1.44"
+	            android:gravity="right"
+	            android:text="金额:" />
+	        
+	        <EditText
+	            android:id="@+id/moneyEditText"
+	            android:layout_width="237dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:background="@drawable/edittext_style"
+	            android:inputType="number" />
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"/>
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:layout_marginTop="10dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.67"
+	            android:gravity="right"
+	            android:text="登录密码:" />
+	        
+	        <EditText
+	            android:id="@+id/loginUpPasswordEditText"
+	            android:layout_width="237dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:background="@drawable/edittext_style"
+	            android:inputType="textPassword" />
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"/>
+	        
+	    </LinearLayout>
+	    
+	    <Button 
+	        android:layout_marginTop="20dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/okButton"
+	        android:text="确认"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_below="@id/topBankTransferTabHost"
+        android:id="@+id/twoLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible">
+	    
+        <LinearLayout 
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="卡号:"
+                android:gravity="right"
+                android:layout_weight="1.44"/>
+            
+             <EditText
+	            android:id="@+id/twoCardIdEditText"
+	            android:layout_width="237dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:background="@drawable/edittext_style"
+	            android:inputType="number" />
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名:"
+                android:gravity="right"
+                android:layout_weight="1.44"/>
+            
+             <EditText
+	            android:id="@+id/twoAccountNameEditText"
+	            android:layout_width="237dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:background="@drawable/edittext_style"
+	            android:inputType="text" />
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="金额:"
+                android:gravity="right"
+                android:layout_weight="1.44"/>
+            
+             <EditText
+	            android:id="@+id/twoMoneyEditText"
+	            android:layout_width="237dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:background="@drawable/edittext_style"
+	            android:inputType="number" />
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+	        android:layout_marginTop="10dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.67"
+	            android:text="登录密码:"
+	            android:gravity="right"/>
+	        
+	        <EditText
+	            android:id="@+id/loginUpPasswordOneEditText"
+	            android:layout_width="237dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:background="@drawable/edittext_style"
+	            android:inputType="textPassword" />
+	        
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"/>
+	        
+	    </LinearLayout>
+        
+        <Button 
+	        android:layout_marginTop="20dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/okTwoButton"
+	        android:text="确认"/>
+        
+    </LinearLayout>
+    
+    
+</RelativeLayout>

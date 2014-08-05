@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/news_bottom_bg"
+    android:orientation="horizontal" >
+	
+    <ImageView
+        android:id="@+id/news_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:scaleType="centerInside"
+        android:contentDescription="@null"
+        android:src="@drawable/news_all_pressed"/>
+    
+    <ImageView
+        android:id="@+id/news_recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:scaleType="centerInside"
+        android:contentDescription="@null"
+        android:src="@drawable/news_recommend"/>
+    
+    <ImageView
+        android:id="@+id/news_push"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:scaleType="centerInside"
+        android:contentDescription="@null"
+        android:src="@drawable/news_push"/>
+    
+    <ImageView
+        android:id="@+id/news_collect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:scaleType="centerInside"
+        android:contentDescription="@null"
+        android:src="@drawable/news_collect" />
+
+</LinearLayout>

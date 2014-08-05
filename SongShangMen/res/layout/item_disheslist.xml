@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#FFFFFF">
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/goodsImageView"
+        android:background="@drawable/ic_launcher"/>
+    
+     <TextView 
+        android:layout_toRightOf="@id/goodsImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:id="@+id/dishesNameTextView"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="#ec558e"/>
+     
+     <TextView 
+        android:layout_toRightOf="@id/goodsImageView"
+        android:layout_below="@id/dishesNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:id="@+id/dishesPriceTextView"
+        android:textSize="15sp"
+        android:textColor="#ec558e"
+        android:gravity="center"/>
+        
+    <LinearLayout 
+        android:layout_below="@id/dishesNameTextView"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp">
+        
+        <ImageButton 
+            android:contentDescription="@string/hello_world"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/minusImageButton"
+            android:visibility="invisible"
+            android:background="@drawable/dishesminus"/>
+        
+        <TextView 
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/dishesNumberTextView"
+            android:visibility="invisible"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"/>
+        
+        <ImageButton 
+            android:contentDescription="@string/hello_world"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/plusImageButton"
+            android:background="@drawable/dishesplus"/>
+        
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/ItemId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</RelativeLayout>

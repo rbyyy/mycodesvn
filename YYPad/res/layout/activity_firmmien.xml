@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0e0e0"
+    android:orientation="vertical" >
+    
+<!-- 导航栏 -->
+ 	 <LinearLayout
+        android:id="@+id/topFirm"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true" >
+
+        <include layout="@layout/top_title" />
+    </LinearLayout>
+<!-- 第一列 公司简介和店面展示 -->
+ 	 <TableLayout
+ 	     android:id="@+id/oneTable"
+ 	     android:layout_width="wrap_content"
+ 	     android:layout_height="wrap_content"
+ 	     android:layout_alignParentLeft="true"
+ 	     android:layout_below="@+id/topFirm"
+ 	     android:layout_marginLeft="76dp"
+ 	     android:layout_marginTop="10dp" >
+<!-- 第一行 公司简介 -->
+ 	     <TableRow
+ 	         android:id="@+id/tableRow1"
+ 	         android:layout_width="712dp"
+ 	         android:layout_height="wrap_content"
+ 	         >
+ 	         <LinearLayout
+ 	             android:layout_width="wrap_content"
+ 	             android:layout_height="wrap_content" 
+ 	              android:orientation="vertical"
+ 	             >
+ 	             <!-- 公司简介上视图 -->
+ 	             <RelativeLayout
+ 	                 android:layout_width="wrap_content"
+ 	                 android:layout_height="wrap_content"
+ 	                 >
+ 	                 <ImageView 
+ 	             		android:layout_width="712dp"
+ 	             		android:layout_height="60dp"
+ 	             		android:background="@drawable/bannertitle"/>
+ 	                 <TextView
+ 	                     android:layout_width="712dp"
+ 	                     android:layout_height="44dp"
+ 	                     android:layout_centerInParent="true"
+ 	                     android:layout_centerHorizontal="true"
+ 	                     android:layout_centerVertical="true"
+ 	                     android:textAlignment="center"
+ 	                     android:textColor="#595959"
+ 	                     android:textSize="30sp"
+ 	                     android:text="公司简介" 
+ 	                     android:gravity="center_horizontal"
+ 	                     />
+ 	             </RelativeLayout>
+ 	             <!-- 公司简介的内容 -->
+ 	             <ScrollView 
+ 	                 android:paddingLeft="6dp"
+ 	                 android:paddingRight="6dp"
+ 	                 android:layout_width="match_parent"
+ 	                 android:layout_height="292dp"
+ 	                 >
+ 	                 <LinearLayout 
+ 	                     android:layout_width="match_parent"
+ 	                     android:layout_height="wrap_content"
+ 	                     >
+ 	                     <TextView
+ 	                         android:id="@+id/firmIntroduce" 
+ 	                         android:layout_width="match_parent"
+ 	                         android:layout_height="300dp"
+ 	                         android:background="#36464e"
+ 	                         android:textColor="#FFFFFF"
+ 	                         android:textSize="16sp"
+ 	                         android:text="   飞度科技是专业从事互联网相关业务开发的公司，依托网页设计、网站制作、网站建设、网站策划为主体，为企业提供网络整合营销服务为一体的综合性网络公司。
+飞度科技致力于网站建设的全方位发展，立足于以WEB为核心，以WEB应用开发及服务为发展战略的经营理念，在网站建设、网上购物商城、直销会员管理系统、电子政务手机客户端开发等方面积累了自己独特的经验并取得了很好的成绩。
+       郑州网站建设-飞度科技拥有一支集市场商务、创意策划和售后技术支持为一体的专业队伍。公司核心成员由原知名的一些网络公司技术人员组成，对于整合相关企业互联网营销业务有独到见解，更能替企业着想，我们以真诚的态度、求实的服务赢得了各级汽车、医药、化工、服装、旅游、上市集团公司等行业内的一大批具有雄厚实力的客户群体。"
+ 	                         />
+ 	                 </LinearLayout>
+ 	             </ScrollView>
+ 	         </LinearLayout>
+ 	     </TableRow>
+<!-- 第二行 店面展示 -->
+ 	     <TableRow
+ 	         android:id="@+id/tableRow2"
+ 	         android:paddingTop="20dp"
+ 	         android:layout_width="wrap_content"
+ 	         android:layout_height="wrap_content" >
+ 	         <LinearLayout
+ 	             android:layout_width="wrap_content"
+ 	             android:layout_height="wrap_content" 
+ 	              android:orientation="vertical"
+ 	             >
+ 	             <!-- 店面展示上视图 -->
+ 	             <RelativeLayout
+ 	                 android:layout_width="wrap_content"
+ 	                 android:layout_height="wrap_content"
+ 	                 >
+ 	                 <ImageView 
+ 	             		android:layout_width="712dp"
+ 	             		android:layout_height="60dp"
+ 	             		android:background="@drawable/bannertitle"/>
+ 	                 <TextView
+ 	                     android:layout_width="712dp"
+ 	                     android:layout_height="44dp"
+ 	                     android:layout_centerInParent="true"
+ 	                     android:layout_centerHorizontal="true"
+ 	                     android:layout_centerVertical="true"
+ 	                     android:textAlignment="center"
+ 	                     android:textColor="#595959"
+ 	                     android:textSize="30sp"
+ 	                     android:text="店面展示" 
+ 	                     android:gravity="center_horizontal"
+ 	                     />
+ 	             </RelativeLayout>
+ 	             <!-- 店面展示的内容 -->
+ 	             <ListView
+ 	                 android:id="@+id/storeShowList"
+ 	                 android:paddingLeft="6dp"
+  	                 android:paddingRight="6dp"
+ 	                 android:layout_width="match_parent"
+ 	                 android:layout_height="292dp" 
+ 	                 android:divider="@null"
+ 	                 android:listSelector="@android:color/transparent"
+ 	                 >
+ 	             	</ListView>
+ 	         </LinearLayout>
+ 	     </TableRow>
+ 	 </TableLayout>
+<!-- 第二列数据 -->
+ 	 <TableLayout
+ 	     android:layout_width="wrap_content"
+ 	     android:layout_height="wrap_content"
+ 	     android:layout_centerVertical="true"
+ 	     android:layout_below="@id/topFirm"
+ 	     android:layout_toRightOf="@id/oneTable"
+ 	     android:layout_marginLeft="16dp"
+ 	     android:layout_marginTop="10dp" >
+
+ 	     <TableRow
+ 	         android:id="@+id/tableRow5"
+ 	         android:layout_width="wrap_content"
+ 	         android:layout_height="wrap_content" >
+ 	         <LinearLayout
+ 	             android:layout_width="wrap_content"
+ 	             android:layout_height="wrap_content" 
+ 	              android:orientation="vertical"
+ 	             >
+ 	             <!-- 店面展示上视图 -->
+ 	             <RelativeLayout
+ 	                 android:layout_width="wrap_content"
+ 	                 android:layout_height="wrap_content"
+ 	                 >
+ 	                 <ImageView 
+ 	             		android:layout_width="400dp"
+ 	             		android:layout_height="60dp"
+ 	             		android:background="@drawable/bannertitle"/>
+ 	                 <TextView
+ 	                     android:layout_width="400dp"
+ 	                     android:layout_height="44dp"
+ 	                     android:layout_centerInParent="true"
+ 	                     android:layout_centerHorizontal="true"
+ 	                     android:layout_centerVertical="true"
+ 	                     android:textAlignment="center"
+ 	                     android:textColor="#595959"
+ 	                     android:textSize="30sp"
+ 	                     android:text="团队风采" 
+ 	                     android:gravity="center_horizontal"
+ 	                     />
+ 	             </RelativeLayout>
+ 	             <!-- 店面展示的内容 -->
+ 	             <ListView
+ 	                 android:paddingLeft="6dp"
+ 	                 android:paddingRight="6dp"
+ 	                 android:id="@+id/termMienList"
+ 	                 android:layout_width="match_parent"
+ 	                 android:layout_height="663dp" 
+ 	                 android:divider="@null"
+ 	                 android:listSelector="@android:color/transparent"
+ 	                 >
+ 	             	</ListView>
+ 	         </LinearLayout>
+ 	     </TableRow>
+ 	 </TableLayout>
+
+</RelativeLayout>

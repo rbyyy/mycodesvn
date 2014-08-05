@@ -1,0 +1,226 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0e0e0" >
+
+    <!-- 导航栏 -->
+    <LinearLayout
+        android:id="@+id/topMain"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true" >
+
+        <include layout="@layout/top_title" />
+    </LinearLayout>
+<!-- 第一列菜单按钮 -->
+    <TableLayout
+        android:id="@+id/oneTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/topMain"
+        android:layout_marginLeft="12dp">
+<!--         android:paddingTop="32dp" -->
+<!-- 公司风采 -->
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="460dp"
+            android:layout_height="438dp" 
+            android:paddingBottom="10dp" >
+            <FrameLayout 
+                android:layout_width="460dp"
+                android:layout_height="438dp"
+                >
+                <ImageButton 
+                    android:id="@+id/firmButton"
+			    	android:contentDescription="@string/image_button_desc"
+                	android:layout_width="460dp"
+                	android:layout_height="438dp"
+                	/>
+<!--                 android:background="@drawable/mainpageone" -->
+                <RelativeLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="141dp"
+                    >
+                    <ImageView 
+                    	android:contentDescription="@string/imageview_desc"
+                    	android:layout_width="177dp"
+                    	android:layout_height="59dp"
+                    	android:background="@drawable/menutitle"
+                    />
+                	<TextView 
+                    	android:layout_width="177dp"
+                    	android:layout_height="59dp"
+                    	android:textColor="#ffffff"
+                    	android:textSize="23sp"
+                    	android:text="公司风采"
+                    	android:gravity="center"/>
+                </RelativeLayout>
+            </FrameLayout>
+        </TableRow>
+<!-- 促销活动 -->
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="460dp"
+            android:layout_height="286dp" >
+            <FrameLayout 
+                android:layout_width="460dp"
+                android:layout_height="286dp"
+                >
+                <ImageButton 
+                    android:id="@+id/salesButton"
+			    	android:contentDescription="@string/image_button_desc"
+                	android:layout_width="460dp"
+                	android:layout_height="286dp"/>
+<!--                 android:background="@drawable/mainpagetwo" -->
+                <RelativeLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="141dp"
+                    >
+                    <ImageView 
+                    	android:contentDescription="@string/imageview_desc"
+                    	android:layout_width="177dp"
+                    	android:layout_height="59dp"
+                    	android:background="@drawable/menutitle"
+                    />
+                	<TextView 
+                    	android:layout_width="177dp"
+                    	android:layout_height="59dp"
+                    	android:textColor="#ffffff"
+                    	android:textSize="23sp"
+                    	android:text="促销活动"
+                    	android:gravity="center"/>
+                </RelativeLayout>
+            </FrameLayout>
+        </TableRow>
+    </TableLayout>
+<!-- 第二列菜单按钮 --> 
+    <TableLayout
+        android:id="@+id/twoTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/topMain"
+        android:layout_toRightOf="@id/oneTable"
+        android:layout_marginLeft="483dp" >
+<!-- DIY专区 -->
+        <TableRow
+            android:layout_width="460dp"
+            android:layout_height="735dp" >
+            <FrameLayout 
+                android:layout_width="460dp"
+                android:layout_height="735dp"
+                >
+                <ImageButton 
+                    android:id="@+id/diyButton"
+			    	android:contentDescription="@string/image_button_desc"
+                	android:layout_width="460dp"
+                	android:layout_height="735dp"/>
+<!--                     android:background="@drawable/mainpagethree" -->
+                <RelativeLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="141dp"
+                    >
+                    <ImageView 
+                    	android:contentDescription="@string/imageview_desc"
+                    	android:layout_width="177dp"
+                    	android:layout_height="59dp"
+                    	android:background="@drawable/menutitle"
+                    />
+                	<TextView 
+                    	android:layout_width="177dp"
+                    	android:layout_height="59dp"
+                    	android:textColor="#ffffff"
+                    	android:textSize="23sp"
+                    	android:text="DIY专区"
+                    	android:gravity="center"/>
+                </RelativeLayout>
+            </FrameLayout>
+        </TableRow>
+    </TableLayout>
+<!-- 第三列菜单按钮 -->
+    <TableLayout
+       android:id="@+id/threeTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/topMain"
+        android:layout_toRightOf="@id/twoTable"
+        android:layout_marginLeft="954dp">
+<!-- 整机专区 -->
+        <TableRow
+            android:layout_width="313dp"
+            android:layout_height="372dp"
+            android:paddingBottom="10dp" >
+            <FrameLayout 
+                android:layout_width="313dp"
+                android:layout_height="372dp"
+                >
+                <ImageButton 
+                    android:id="@+id/completeButton"
+			    	android:contentDescription="@string/image_button_desc"
+                	android:layout_width="313dp"
+                	android:layout_height="372dp"/>
+<!--                 android:background="@drawable/mainpagefour" -->
+                <RelativeLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    >
+                    <ImageView 
+                    	android:contentDescription="@string/imageview_desc"
+                    	android:layout_width="177dp"
+                    	android:layout_height="59dp"
+                    	android:background="@drawable/menutitle"
+                    />
+                	<TextView 
+                    	android:layout_width="177dp"
+                    	android:layout_height="59dp"
+                    	android:textColor="#ffffff"
+                    	android:textSize="23sp"
+                    	android:text="整机专区"
+                    	android:gravity="center"/>
+                </RelativeLayout>
+            </FrameLayout>
+        </TableRow>
+<!-- 精品展示 -->
+        <TableRow
+            android:layout_width="313dp"
+            android:layout_height="352dp" >
+            <FrameLayout 
+                android:layout_width="313dp"
+                android:layout_height="352dp"
+                >
+                <ImageButton 
+                    android:id="@+id/boutiqueButton"
+			    	android:contentDescription="@string/image_button_desc"
+                	android:layout_width="313dp"
+                	android:layout_height="352dp"/>
+<!--                 android:background="@drawable/mainpagefive" -->
+                <RelativeLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    >
+                    <ImageView 
+                    	android:contentDescription="@string/imageview_desc"
+                    	android:layout_width="177dp"
+                    	android:layout_height="59dp"
+                    	android:background="@drawable/menutitle"
+                    />
+                	<TextView 
+                    	android:layout_width="177dp"
+                    	android:layout_height="59dp"
+                    	android:textColor="#ffffff"
+                    	android:textSize="23sp"
+                    	android:text="精品展示"
+                    	android:gravity="center"/>
+                </RelativeLayout>
+            </FrameLayout>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

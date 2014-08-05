@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 自定义属性集 -->
+	<declare-styleable name="LeftMenu">
+	    <attr name="animationDuration" format="integer" />
+	    <attr name="menu" format="reference"/>
+	    <attr name="content" format="reference"/>
+	</declare-styleable>
+	
+    <declare-styleable name="drop_down_list_attr">
+        <attr name="isDropDownStyle" format="boolean" />
+        <attr name="isOnBottomStyle" format="boolean" />
+        <attr name="isAutoLoadOnBottom" format="boolean" />
+    </declare-styleable>
+</resources>

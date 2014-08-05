@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#ffffff"
+    android:baselineAligned="false" >
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+        
+        <ImageView 
+            android:contentDescription="@string/imageviewcontent"
+            android:id="@+id/goodsImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/goodsimage"/>
+        
+        <ImageView 
+            android:contentDescription="@string/imageviewcontent"
+            android:id="@+id/goodsFlagImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/goodsflag"/>
+        
+        <ImageView 
+            android:contentDescription="@string/imageviewcontent"
+            android:id="@+id/goodsTwoFlagImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"/>
+        
+    </FrameLayout>
+    
+    <LinearLayout 
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        
+        <TextView 
+            android:layout_marginTop="5dp"
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:text="百年老妈火锅"/>
+        
+        <TextView 
+            android:layout_marginTop="5dp"
+            android:id="@+id/contentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:text="【2店通用】100元代金券1张，可叠加使用，大厅和包间免费使用"/>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <TextView
+                android:id="@+id/couponPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="68"
+                android:textColor="#e9528c"
+                android:textSize="20sp" />
+            
+            <TextView 
+                android:layout_toRightOf="@id/couponPriceTextView"
+                android:id="@+id/yuanTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="7dp"
+                android:textSize="12sp"
+                android:text="元"/>
+            
+            <TextView 
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/yuanTextView"
+                android:id="@+id/realPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="7dp"
+                android:textSize="12sp"
+                android:text="100元"/>
+            
+            <TextView 
+                android:id="@+id/orderDescTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="7dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:textSize="12sp"
+                android:text="已售3772份"/>
+            
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0e0e0" >
+ <!-- 导航栏 -->   
+    <LinearLayout 
+        android:id="@+id/topProductDetail"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true">
+        <include layout="@layout/top_title"/>   
+     </LinearLayout> 
+     
+<!--     <ImageView  -->
+<!--  	    android:id="@+id/productDetailImageview" -->
+<!--  	    android:layout_below="@id/topProductDetail" -->
+<!--      	android:contentDescription="@string/imageview_desc" -->
+<!--    		android:layout_width="314dp" -->
+<!--    		android:layout_height="278dp" -->
+<!--    		android:src="@drawable/productimage" -->
+<!--    		android:layout_marginLeft="300dp" -->
+<!--    		android:layout_marginTop="10dp" -->
+<!--    	/> -->
+<!--     <TextView  -->
+<!--         android:id="@+id/productDetailTextview" -->
+<!--         android:layout_below="@id/productDetailImageview" -->
+<!--    		android:layout_width="1000dp" -->
+<!--    		android:layout_height="556dp" -->
+<!--    		android:layout_marginLeft="140dp" -->
+<!--    		android:layout_marginTop="40dp" -->
+<!--    		android:textColor="#000000" -->
+<!--         /> -->
+    <WebView 
+        android:id="@+id/productDetailWebView"
+        android:layout_below="@id/topProductDetail"
+        android:layout_width="1280dp"
+        android:layout_height="734dp"
+        />
+<!--    		android:layout_marginLeft="140dp" -->
+<!--    		android:layout_marginTop="10dp" -->
+</RelativeLayout>

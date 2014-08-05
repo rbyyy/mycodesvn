@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:gravity="center"
+	        android:textSize="20sp"
+	        android:text="查询余额"/>
+    
+    <LinearLayout 
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <TextView
+	        android:layout_width="60dp"
+	        android:layout_height="40dp"
+	        android:gravity="center"
+	        android:textSize="20sp"
+	        android:text="账号"/>
+	    <TextView  
+	        android:id="@+id/accountInfoEditText"
+	        android:layout_width="280dp"
+	        android:layout_height="30dp"
+	        android:background="@drawable/edittext_style"/>
+    </LinearLayout>
+    
+    <Button 
+        android:layout_marginTop="10dp"
+        android:id="@+id/queryBalanceButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="查询"
+        android:layout_gravity="center_horizontal"/>
+       
+    <LinearLayout 
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+	    
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返利(元)"/>
+        
+        <TextView
+	        android:id="@+id/rebateTextView"
+	        android:layout_width="match_parent"
+	        android:layout_height="80dp"
+	        android:textSize="50sp"
+	        android:textColor="#fffcff"
+	        android:background="#ea2b21"
+	        android:gravity="center_vertical"/>
+        
+        <TextView 
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总金额(元)"/>
+        
+        <TextView
+            android:layout_marginLeft="10dp"
+	        android:id="@+id/balanceTextView"
+	        android:layout_width="match_parent"
+	        android:layout_height="80dp"
+	        android:textColor="#e05433"
+	        android:textSize="40sp"
+	        android:gravity="center_vertical"/>
+        
+        
+    </LinearLayout>
+
+
+</LinearLayout>

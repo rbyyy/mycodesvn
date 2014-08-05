@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="120dp"
+        android:visibility="gone" >
+
+        <include layout="@layout/news_left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </LinearLayout>
+
+    <com.law.fangyuan.SlidingLayout
+        android:id="@+id/center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/news_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true" >
+
+                <include layout="@layout/news_top_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/news_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal" >
+
+                <include layout="@layout/news_bottom" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/news_bottom"
+                android:layout_below="@id/news_top"
+                android:orientation="vertical" >
+
+                <com.law.fangyuan.Loading
+                    android:id="@+id/loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dip" />
+
+                <com.law.fangyuan.DropDownListView
+                    android:id="@+id/new_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F6F6F6"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@drawable/sep_line"
+                    android:dividerHeight="1dp"
+                    android:drawSelectorOnTop="false"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+    </com.law.fangyuan.SlidingLayout>
+
+</FrameLayout>
