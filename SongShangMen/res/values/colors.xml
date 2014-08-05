@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="white">#ffffffff</color>
-    <color name="vpi_background_selected">#ffffffff</color>
-    <color name="vpi_background_unselected">#ff999999</color>
-    <color name="dish_menu_unselected">#ff979696</color>
-    <color name="dish_menu_selected">#ffea538d</color>
-    <color name="dish_tab_bgcolor">#fff0f0f0</color>
-</resources>
