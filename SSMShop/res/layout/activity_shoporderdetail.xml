@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="姓名" 
+	        android:textSize="14sp"
+	        android:layout_weight="4.0" />
+        
+        <TextView 
+	        android:id="@+id/userNameTextView"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="14sp"
+	        android:layout_weight="1.0"  />
+        
+    </LinearLayout>
+    
+        <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="姓名" 
+	        android:textSize="14sp"
+	        android:layout_weight="4.0" />
+        
+        <TextView 
+	        android:id="@+id/userNameTextView"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="14sp"
+	        android:layout_weight="1.0"  />
+        
+    </LinearLayout>
+    
+            <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="姓名" 
+	        android:textSize="14sp"
+	        android:layout_weight="4.0" />
+        
+        <TextView 
+	        android:id="@+id/userNameTextView"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="14sp"
+	        android:layout_weight="1.0"  />
+        
+    </LinearLayout>
+    
+                <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="姓名" 
+	        android:textSize="14sp"
+	        android:layout_weight="4.0" />
+        
+        <TextView 
+	        android:id="@+id/userNameTextView"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="14sp"
+	        android:layout_weight="1.0"  />
+        
+    </LinearLayout>
+    
+    <TextView 
+        android:id="@+id/userAddressTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    <TextView 
+        android:id="@+id/userPhoneTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    <ListView 
+        android:id="@+id/shopOrderDetailListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+    </ListView>
+    
+    <Button 
+        android:id="@+id/confirmOrderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确认订单"
+        android:background="@drawable/commitbutton_bg"
+        android:visibility="invisible"
+        android:layout_gravity="center" />
+
+</LinearLayout>
